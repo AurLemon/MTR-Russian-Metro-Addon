@@ -3,8 +3,7 @@ package ru.weryskok.mtrrumetro;
 import mtr.RegistryObject;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
+import net.minecraft.world.level.material.MapColor;
 import ru.weryskok.mtrrumetro.blocks.*;
 import ru.weryskok.mtrrumetro.blocks.BlockMoscowMetroLogo;
 
@@ -19,7 +18,7 @@ public class Blocks {
     public static final RegistryObject<Block> MOSCOW_NEW_TICKET_BARRIER_ENTRANCE = new RegistryObject<>(()-> new BlockMoscowNewTicketBarrier(true));
     public static final RegistryObject<Block> MOSCOW_NEW_TICKET_BARRIER_EXIT = new RegistryObject<>(()-> new BlockMoscowNewTicketBarrier(false));
     public static final RegistryObject<Block> MOSCOW_NEW_TICKET_BARRIER_SIDE_COVER = new RegistryObject<>(BlockMoscowNewTicketBarrierSideCover::new);
-    public static final RegistryObject<Block> MOSCOW_NEW_TICKET_MACHINE = new RegistryObject<>(() -> new BlockMoscowNewTicketMachine(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(2).lightLevel(state -> 5).noOcclusion()));
+    public static final RegistryObject<Block> MOSCOW_NEW_TICKET_MACHINE = new RegistryObject<>(() -> new BlockMoscowNewTicketMachine(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(2).lightLevel(state -> 5).noOcclusion()));
     public static final RegistryObject<Block> SPB_HORIZONTAL_ELEVATOR_DOOR = new RegistryObject<>(() -> new BlockSPBHorizontalElevatorDoor(false));
     public static final RegistryObject<Block> SPB_HORIZONTAL_ELEVATOR_DOOR_ODD = new RegistryObject<>(() -> new BlockSPBHorizontalElevatorDoor(true));
     public static final RegistryObject<Block> MOSCOW_OLD_INFOSOS_STAND = new RegistryObject<>(BlockMoscowOldInfoSosStand::new);

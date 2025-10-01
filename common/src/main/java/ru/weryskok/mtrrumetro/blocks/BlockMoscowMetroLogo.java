@@ -8,8 +8,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
@@ -17,7 +16,7 @@ import org.jetbrains.annotations.Nullable;
 public class BlockMoscowMetroLogo extends BlockDirectionalMapper {
 
     public BlockMoscowMetroLogo() {
-        super(Properties.of(Material.METAL, MaterialColor.COLOR_GRAY).lightLevel((state) -> 14).noOcclusion().requiresCorrectToolForDrops().strength(2));
+        super(Properties.of().mapColor(MapColor.COLOR_GRAY).lightLevel((state) -> 14).noOcclusion().requiresCorrectToolForDrops().strength(2));
     }
 
     @Override

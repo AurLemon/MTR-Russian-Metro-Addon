@@ -74,7 +74,7 @@ public class ItemSPBHorizontalElevatorDoor extends ItemWithCreativeTabBase imple
             }
 
             for (int y = 0; y < height; y++) {
-                if (!world.getBlockState(offsetPos.above(y)).getMaterial().isReplaceable()) {
+                if (!world.getBlockState(offsetPos.above(y)).canBeReplaced()) {
                     return true;
                 }
             }
