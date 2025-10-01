@@ -43,9 +43,6 @@ public class RenderSPBHorizontalElevatorDoor<T extends BlockPSDAPGDoorBase.TileE
         }
 
         final BlockPos pos = entity.getBlockPos();
-        if (IBlock.getStatePropertySafe(world, pos, BlockSPBHorizontalElevatorDoor.TEMP)) {
-            return;
-        }
 
         final Direction facing = IBlock.getStatePropertySafe(world, pos, BlockSPBHorizontalElevatorDoor.FACING);
         final boolean side = IBlock.getStatePropertySafe(world, pos, BlockSPBHorizontalElevatorDoor.SIDE) == EnumSide.RIGHT;

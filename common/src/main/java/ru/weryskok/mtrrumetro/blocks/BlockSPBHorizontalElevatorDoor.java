@@ -12,14 +12,12 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.Property;
 import ru.weryskok.mtrrumetro.BlockEntityTypes;
 import ru.weryskok.mtrrumetro.Items;
 
 public class BlockSPBHorizontalElevatorDoor extends BlockPSDAPGDoorBase {
-    public static final BooleanProperty TEMP = BooleanProperty.create("temp");
     boolean is_odd;
 
     public BlockSPBHorizontalElevatorDoor(boolean is_odd) {
@@ -58,7 +56,7 @@ public class BlockSPBHorizontalElevatorDoor extends BlockPSDAPGDoorBase {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(new Property[]{END, FACING, HALF, SIDE, TEMP, UNLOCKED});
+        builder.add(new Property[]{END, FACING, HALF, SIDE, UNLOCKED});
     }
 
     public static class TileEntitySPBHorizontalElevatorDoor extends TileEntityPSDAPGDoorBase {
