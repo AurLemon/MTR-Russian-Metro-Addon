@@ -7,10 +7,12 @@ dependencies {
 	implementation "it.unimi.dsi:fastutil:+"
 	implementation "commons-io:commons-io:+"
 	implementation "org.mtr:Minecraft-Mod-API-Tools:0.0.1"
+	implementation "org.apache.httpcomponents:httpmime:+"
 }
 
 repositories {
 	flatDir { dirs "../libs" }
+	maven { url "https://jitpack.io" }
 }
 
 java {
