@@ -68,7 +68,8 @@ processResources {
 }
 
 tasks.withType(AbstractArchiveTask).configureEach {
-	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    archiveBaseName.set("${rootProject.name}-neoforge")
 }
 
 java {
