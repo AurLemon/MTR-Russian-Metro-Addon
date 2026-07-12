@@ -22,3 +22,7 @@ classes/
 .vscode
 .settings
 *.launch
+
+# compat files
+scripts/
+server-smoke/
