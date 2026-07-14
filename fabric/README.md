@@ -1,6 +1,10 @@
-## Legacy Notice
+# Fabric legacy module
 
-`fabric/` 目录已不再作为当前主线维护目标。
+This project is currently maintained as a NeoForge port for Minecraft 1.21.1.
 
-当前仓库的正式构建与发布目标是 `NeoForge 1.21.1`。
-这里的旧实现仅保留作历史参考与迁移对照，不再保证可构建、可运行或继续适配新版本。
+The `fabric` Java sources are legacy code from the original upstream mod and are
+not part of the active 1.21.1 build target anymore.
+
+Some resources under `fabric/src/main/resources` are still reused by the
+NeoForge build as shared assets/data. Treat this directory as migration
+reference material unless the resource pipeline is refactored.

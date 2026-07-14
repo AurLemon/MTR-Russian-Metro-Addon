@@ -18,6 +18,8 @@ import org.mtr.block.BlockTicketBarrier;
 import org.mtr.block.BlockTicketMachine;
 import ru.weryskok.mtrrumetro.Constants;
 import ru.weryskok.mtrrumetro.block.FacingBlock;
+import ru.weryskok.mtrrumetro.block.MoscowNewTicketBarrierSideCoverBlock;
+import ru.weryskok.mtrrumetro.block.MoscowOldTicketBarrierSideCoverBlock;
 import ru.weryskok.mtrrumetro.block.ThreeHighFacingBlock;
 import ru.weryskok.mtrrumetro.block.SPBHorizontalElevatorDoorBlock;
 
@@ -31,13 +33,13 @@ public final class RMRBlocks {
     public static final DeferredBlock<Block> MOSCOW_OLD_TICKET_BARRIER_EXIT =
             register("moscow_old_ticket_barrier_exit", () -> new BlockTicketBarrier(baseProperties(3.0F).noOcclusion().lightLevel(state -> 5), false));
     public static final DeferredBlock<Block> MOSCOW_OLD_TICKET_BARRIER_SIDE_COVER =
-            register("moscow_old_ticket_barrier_side_cover", () -> new FacingBlock(baseProperties(3.0F).noOcclusion().lightLevel(state -> 5)));
+            register("moscow_old_ticket_barrier_side_cover", () -> new MoscowOldTicketBarrierSideCoverBlock(baseProperties(3.0F).noOcclusion().lightLevel(state -> 5)));
     public static final DeferredBlock<Block> MOSCOW_NEW_TICKET_BARRIER_ENTRANCE =
             register("moscow_new_ticket_barrier_entrance", () -> new BlockTicketBarrier(baseProperties(3.0F).noOcclusion().lightLevel(state -> 5), true));
     public static final DeferredBlock<Block> MOSCOW_NEW_TICKET_BARRIER_EXIT =
             register("moscow_new_ticket_barrier_exit", () -> new BlockTicketBarrier(baseProperties(3.0F).noOcclusion().lightLevel(state -> 5), false));
     public static final DeferredBlock<Block> MOSCOW_NEW_TICKET_BARRIER_SIDE_COVER =
-            register("moscow_new_ticket_barrier_side_cover", () -> new FacingBlock(baseProperties(3.0F).noOcclusion().lightLevel(state -> 5)));
+            register("moscow_new_ticket_barrier_side_cover", () -> new MoscowNewTicketBarrierSideCoverBlock(baseProperties(3.0F).noOcclusion().lightLevel(state -> 5)));
     public static final DeferredBlock<Block> MOSCOW_NEW_TICKET_MACHINE =
             register("moscow_new_ticket_machine", () -> new BlockTicketMachine(baseProperties(3.0F).noOcclusion().lightLevel(state -> 5)));
     public static final DeferredBlock<Block> MOSCOW_METRO_LOGO =
